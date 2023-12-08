@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "824702465209",
+    "firebase_url": "https://tubesiot-97eae-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tubesiot-97eae",
+    "storage_bucket": "tubesiot-97eae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824702465209:android:5053edbd1a1ca3fc65d768",
+        "android_client_info": {
+          "package_name": "com.example.aplikasiagriculture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY_P5E4XHTVICOt7Em_4bfncA2umX4KFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
