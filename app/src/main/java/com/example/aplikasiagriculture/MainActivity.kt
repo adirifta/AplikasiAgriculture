@@ -12,33 +12,47 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var graphView: GraphView
+    private lateinit var graphViewIntensitasCahaya: GraphView
+    private lateinit var graphViewKelembapanRuangan: GraphView
+    private lateinit var graphViewKelembapanTanah: GraphView
+    private lateinit var graphViewSuhuRuangan: GraphView
     private lateinit var series: LineGraphSeries<DataPoint>
     private lateinit var database: FirebaseDatabase
     private lateinit var reference: DatabaseReference
 
     private val sdf = SimpleDateFormat("hh:mm:ss", Locale.getDefault())
+    private lateinit var intensitasCahayaRef: DatabaseReference
+    private lateinit var kelembapanRuanganRef: DatabaseReference
+    private lateinit var kelembapanTanahRef: DatabaseReference
+    private lateinit var suhuRuanganRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        graphView = findViewById(R.id.graphView)
+        graphViewIntensitasCahaya = findViewById(R.id.graphViewIntensitasCahaya)
+        graphViewKelembapanRuangan = findViewById(R.id.graphViewKelembapanRuangan)
+        graphViewKelembapanTanah = findViewById(R.id.graphViewKelembapanTanah)
+        graphViewSuhuRuangan = findViewById(R.id.graphViewSuhuRuangan)
+
         series = LineGraphSeries()
-        graphView.addSeries(series)
+        graphViewIntensitasCahaya.addSeries(series)  // Use the correct graphView reference
 
         database = FirebaseDatabase.getInstance()
         reference = database.getReference("Tubes")
-
+        intensitasCahayaRef = database.getReference("Tubes/IntensitasCahaya")
+        kelembapanRuanganRef = database.getReference("Tubes/KelembapanRuangan")
+        kelembapanTanahRef = database.getReference("Tubes/KelembapanTanah")
+        suhuRuanganRef = database.getReference("Tubes/SuhuRuangan")
         setupGraphView()
 
         // You can remove setListeners() since the button and text input are removed
     }
 
     private fun setupGraphView() {
-        graphView.gridLabelRenderer.numHorizontalLabels = 3
+        graphViewIntensitasCahaya.gridLabelRenderer.numHorizontalLabels = 3
 
-        graphView.gridLabelRenderer.labelFormatter = object : DefaultLabelFormatter() {
+        graphViewIntensitasCahaya.gridLabelRenderer.labelFormatter = object : DefaultLabelFormatter() {
             override fun formatLabel(value: Double, isValueX: Boolean): String {
                 return if (isValueX) {
                     sdf.format(Date(value.toLong()))
@@ -81,6 +95,54 @@ class MainActivity : AppCompatActivity() {
                 }.toTypedArray()
 
                 series.resetData(averageHourlyData)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle errors here
+            }
+        })
+
+        // Add ValueEventListener for IntensitasCahaya
+        intensitasCahayaRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Handle data change for IntensitasCahaya
+                // Update your UI or process data as needed
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle errors here
+            }
+        })
+
+        // Add ValueEventListener for KelembapanRuangan
+        kelembapanRuanganRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Handle data change for KelembapanRuangan
+                // Update your UI or process data as needed
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle errors here
+            }
+        })
+
+        // Add ValueEventListener for KelembapanTanah
+        kelembapanTanahRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Handle data change for KelembapanTanah
+                // Update your UI or process data as needed
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle errors here
+            }
+        })
+
+        // Add ValueEventListener for SuhuRuangan
+        suhuRuanganRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Handle data change for SuhuRuangan
+                // Update your UI or process data as needed
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
