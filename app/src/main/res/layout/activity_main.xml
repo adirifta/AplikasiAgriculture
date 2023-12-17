@@ -2,7 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/abu_abu1"
+    android:background="@color/abu_abu2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/abu_abu"
         app:itemIconTint="@color/bottom_navigation_item_color"
         app:itemTextColor="@color/bottom_navigation_item_color"
         app:itemIconSize="45dp"

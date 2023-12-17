@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/abu_abu1"
+    android:background="@color/abu_abu2"
     tools:context=".AnalisaGrafik">
 
-
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
