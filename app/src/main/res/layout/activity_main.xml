@@ -1,58 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/abu_abu1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <!-- Content FrameLayout -->
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/bottom_navigation_item_color"
+        app:itemTextColor="@color/bottom_navigation_item_color"
+        app:itemIconSize="45dp"
+        app:menu="@menu/bottom_navigation_menu"/>
 
-            <!-- GraphView for IntensitasCahaya -->
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graphViewIntensitasCahaya"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_margin="20dp"
-                android:layout_marginTop="16dp"/>
-
-            <!-- GraphView for KelembapanRuangan -->
-            <TextView
-                android:layout_below="@id/graphViewIntensitasCahaya"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_marginBottom="50dp"
-                android:text="Kelembapan"/>
-
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graphViewKelembapanRuangan"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@+id/graphViewIntensitasCahaya"
-                android:layout_margin="20dp"/>
-
-            <!-- GraphView for KelembapanTanah -->
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graphViewKelembapanTanah"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@+id/graphViewKelembapanRuangan"
-                android:layout_margin="20dp"/>
-
-            <!-- GraphView for SuhuRuangan -->
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graphViewSuhuRuangan"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@+id/graphViewKelembapanTanah"
-                android:layout_margin="20dp"/>
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
