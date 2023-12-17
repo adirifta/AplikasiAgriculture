@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AplikasiAgriculture"
         tools:targetApi="31">
         <activity
+            android:name=".CustomMarkerView"
+            android:exported="false" />
+        <activity
             android:name=".AnalisaData"
             android:exported="false" />
         <activity

@@ -54,7 +54,8 @@ class AnalisaData : AppCompatActivity() {
                     }
                 },
                 Response.ErrorListener { error ->
-                    Toast.makeText(this@AnalisaData, error.message, Toast.LENGTH_SHORT).show()
+                    val toast = Toast.makeText(applicationContext, "Teks yang akan ditampilkan", Toast.LENGTH_SHORT)
+                    toast.show()
                 }) {
 
                 override fun getParams(): Map<String, String> {
