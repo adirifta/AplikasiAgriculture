@@ -6,12 +6,12 @@
         android:icon="@drawable/ic_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_data"
         android:title="@string/data"
         android:icon="@drawable/ic_data" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_grafik"
         android:title="@string/grafik"
         android:icon="@drawable/ic_grafik" />
 </menu>
