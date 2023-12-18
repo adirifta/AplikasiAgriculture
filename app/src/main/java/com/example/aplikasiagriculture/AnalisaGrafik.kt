@@ -13,9 +13,7 @@ import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
@@ -23,12 +21,12 @@ import com.google.firebase.database.ValueEventListener
 class AnalisaGrafik : AppCompatActivity() {
 
     private lateinit var databaseReference: DatabaseReference
+    private val lineDataSetList = mutableListOf<LineDataSet>()
     private lateinit var textViewIntensitasCahaya: TextView
     private lateinit var textViewKelembapanRuangan: TextView
     private lateinit var textViewKelembapanTanah: TextView
     private lateinit var textViewSuhuRuangan: TextView
     private lateinit var lineChart: LineChart
-    private val lineDataSetList = mutableListOf<LineDataSet>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
