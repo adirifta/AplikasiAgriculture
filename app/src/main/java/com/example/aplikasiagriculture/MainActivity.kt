@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    // Handle Home menu click
+                    startActivity(Intent(this, AnalisaBuah::class.java))
                     true
                 }
                 R.id.navigation_data -> {
