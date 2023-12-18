@@ -6,52 +6,62 @@
     android:background="@color/abu_abu2"
     tools:context=".AnalisaGrafik">
 
+    <TextView
+        android:id="@+id/txt_judul"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Graphic Analysis"
+        android:textColor="@color/abu_abu"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        />
+
     <!-- LineChart view -->
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"
+        android:layout_below="@+id/txt_judul"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_margin="20dp" />
 
-    <!-- TextViews to display Firebase data -->
-    <TextView
-        android:id="@+id/textViewIntensitasCahaya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <!-- Grid of TextViews to display Firebase data -->
+    <GridLayout
+        android:id="@+id/gridLayoutData"
         android:layout_below="@id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:text="Intensitas Cahaya: "
-        android:textSize="16sp" />
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
-    <TextView
-        android:id="@+id/textViewKelembapanRuangan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewIntensitasCahaya"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:text="Kelembapan Ruangan: "
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textViewIntensitasCahaya"
+            style="@style/DataTextView"
+            android:background="@drawable/rounded_corner"
+            android:text="Intensitas Cahaya: " />
 
-    <TextView
-        android:id="@+id/textViewKelembapanTanah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewKelembapanRuangan"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:text="Kelembapan Tanah: "
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textViewKelembapanRuangan"
+            style="@style/DataTextView"
+            android:background="@drawable/rounded_corner"
+            android:text="Kelembapan Ruangan: " />
 
-    <TextView
-        android:id="@+id/textViewSuhuRuangan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewKelembapanTanah"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:text="Suhu Ruangan: "
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textViewKelembapanTanah"
+            style="@style/DataTextView"
+            android:background="@drawable/rounded_corner"
+            android:text="Kelembapan Tanah: " />
 
+        <TextView
+            android:id="@+id/textViewSuhuRuangan"
+            style="@style/DataTextView"
+            android:background="@drawable/rounded_corner"
+            android:text="Suhu Ruangan: " />
+    </GridLayout>
 </RelativeLayout>
