@@ -11,5 +11,5 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:src="@drawable/ic_tomat_putih" />
 </RelativeLayout>

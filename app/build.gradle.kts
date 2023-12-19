@@ -59,4 +59,5 @@ dependencies {
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation ("org.tensorflow:tensorflow-lite:2.5.0")
     implementation ("org.tensorflow:tensorflow-lite-support:0.3.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
 }

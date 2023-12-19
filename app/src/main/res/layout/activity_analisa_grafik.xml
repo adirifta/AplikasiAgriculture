@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/abu_abu2"
     tools:context=".AnalisaGrafik">
 
@@ -40,28 +41,77 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
-        <TextView
-            android:id="@+id/textViewIntensitasCahaya"
-            style="@style/DataTextView"
-            android:background="@drawable/rounded_corner"
-            android:text="Intensitas Cahaya: " />
+        <!-- Card 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:backgroundTint="@color/blue"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
 
-        <TextView
-            android:id="@+id/textViewKelembapanRuangan"
-            style="@style/DataTextView"
-            android:background="@drawable/rounded_corner"
-            android:text="Kelembapan Ruangan: " />
+            <TextView
+                android:id="@+id/textViewIntensitasCahaya"
+                style="@style/DataTextView"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:text="Intensitas Cahaya: " />
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textViewKelembapanTanah"
-            style="@style/DataTextView"
-            android:background="@drawable/rounded_corner"
-            android:text="Kelembapan Tanah: " />
+        <!-- Card 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:backgroundTint="@color/green"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
 
-        <TextView
-            android:id="@+id/textViewSuhuRuangan"
-            style="@style/DataTextView"
-            android:background="@drawable/rounded_corner"
-            android:text="Suhu Ruangan: " />
+            <TextView
+                android:id="@+id/textViewKelembapanRuangan"
+                style="@style/DataTextView"
+                android:layout_marginLeft="10dp"
+                android:text="Kelembapan Ruangan: " />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:backgroundTint="@color/red"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/textViewKelembapanTanah"
+                style="@style/DataTextView"
+                android:layout_marginLeft="10dp"
+                android:text="Kelembapan Tanah: " />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 4 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:backgroundTint="@color/yellow"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/textViewSuhuRuangan"
+                style="@style/DataTextView"
+                android:layout_marginLeft="10dp"
+                android:text="Suhu Ruangan: " />
+        </androidx.cardview.widget.CardView>
     </GridLayout>
 </RelativeLayout>

@@ -6,6 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textAllCaps="true"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/abu_abu"
+        android:textStyle="bold"
+        android:layout_marginTop="200dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="to the app"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/abu_abu"
+        android:textStyle="bold"
+        android:layout_marginTop="265dp"
+        />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:src="@drawable/ic_tomat_hitam" />
+
     <!-- Content FrameLayout -->
     <FrameLayout
         android:id="@+id/container"

@@ -140,9 +140,6 @@ class AnalisaGrafik : AppCompatActivity() {
         lineChart.invalidate()
     }
 
-// ...
-
-    // Set up LineDataSet for each line with different colors
     private fun setupLineDataSet() {
         val colors = mutableListOf<Int>(
             Color.BLUE,
